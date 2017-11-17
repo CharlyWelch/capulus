@@ -90,27 +90,30 @@ if (document.getElementById('search') != null) {
 // take form input, return to user
 if (document.getElementById('suggest-form') != null) {
     // loop to render all previously suggested cafes
-    const parsedCafes = JSON.parse(localStorage.newCafes);
-    for (let i = 0; i < parsedCafes.length; i++){
-        const suggestion = document.getElementById('suggestion-return');
-        const suggestList = document.createElement('ul');
-        const listItemName = document.createElement('li');
-        listItemName.textContent = parsedCafes[i].suggestName;
-        const listItemAddress = document.createElement('li');
-        listItemAddress.textContent = parsedCafes[i].suggestAddress;
-        const listItemSite = document.createElement('li');
-        listItemSite.textContent = parsedCafes[i].suggestSite;
-        suggestList.appendChild(listItemName);
-        suggestList.appendChild(listItemAddress);
-        suggestList.appendChild(listItemSite);
-        suggestion.appendChild(suggestList);
-    }
-
-    const suggestForm = document.getElementById('suggest-form');
+    
     //add click handler for the suggestForm
+    const suggestForm = document.getElementById('suggest-form');
+    let parsedCafes = [];
+    if (localStorage.newCafes !== undefined){ //eslint-disable-line
+        let parsedCafes = JSON.parse(localStorage.newCafes);
+        parsedCafes = JSON.parse(localStorage.newCafes);
+        for (let i = 0; i < parsedCafes.length; i++){
+            const suggestion = document.getElementById('suggestion-return');
+            const suggestList = document.createElement('ul');
+            const listItemName = document.createElement('li');
+            listItemName.textContent = parsedCafes[i].suggestName;
+            const listItemAddress = document.createElement('li');
+            listItemAddress.textContent = parsedCafes[i].suggestAddress;
+            const listItemSite = document.createElement('li');
+            listItemSite.textContent = parsedCafes[i].suggestSite;
+            suggestList.appendChild(listItemName);
+            suggestList.appendChild(listItemAddress);
+            suggestList.appendChild(listItemSite);
+            suggestion.appendChild(suggestList);
+        }
+    };
     suggestForm.addEventListener('submit', function(e){
         e.preventDefault();
-        const parsedCafes = JSON.parse(localStorage.newCafes);
         const suggestName = document.getElementById('suggest-cafe-name').value;
         const suggestAddress = document.getElementById('suggest-cafe-address').value;
         const suggestSite = document.getElementById('suggest-cafe-site').value;
