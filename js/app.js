@@ -48,27 +48,27 @@ cafes.push(barista);
 
 
 
-// // NEW CAFES FOR TESTING AND DEMONSTRATION
-// const water = new Cafe ('Water Avenue', '1028 SE Water Avenue', 'https://www.wateravenuecoffee.com' , 'assets/images/water.jpg');
-// water.rateWork (3,2,3);
-// water.rateMenu (4,5,3);
-// water.rateComm (3,4,3);
-// water.rateOverall();
-// cafes.push(water);
+// NEW CAFES FOR TESTING AND DEMONSTRATION
+const water = new Cafe ('Water Avenue', '1028 SE Water Avenue', 'https://www.wateravenuecoffee.com' , 'assets/images/water.jpg');
+water.rateWork (3,2,3);
+water.rateMenu (4,5,3);
+water.rateComm (3,4,3);
+water.rateOverall();
+cafes.push(water);
 
-// const tov = new Cafe ('Tov', '3207 SE Hawthorne Bvd', 'https://www.tovcoffee.com' ,'assets/images/tov.jpg');
-// tov.rateWork (2,4,3);
-// tov.rateMenu (2,5,3);
-// tov.rateComm (5,4,3);
-// tov.rateOverall();
-// cafes.push(tov);
+const tov = new Cafe ('Tov', '3207 SE Hawthorne Bvd', 'https://www.tovcoffee.com' ,'assets/images/tov.jpg');
+tov.rateWork (2,4,3);
+tov.rateMenu (2,5,3);
+tov.rateComm (5,4,3);
+tov.rateOverall();
+cafes.push(tov);
 
-// const commissary = new Cafe ('Commissary', '915 NW 19th Avenue', 'http://www.commissarycafe.com' , 'assets/images/commissary.jpg');
-// commissary.rateWork (3,4,1);
-// commissary.rateMenu (4,3,3);
-// commissary.rateComm (3,4,5);
-// commissary.rateOverall();
-// cafes.push(commissary);
+const commissary = new Cafe ('Commissary', '915 NW 19th Avenue', 'http://www.commissarycafe.com' , 'assets/images/commissary.jpg');
+commissary.rateWork (3,4,1);
+commissary.rateMenu (4,3,3);
+commissary.rateComm (3,4,5);
+commissary.rateOverall();
+cafes.push(commissary);
 
 
 // Stores username to local from landing page
